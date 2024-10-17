@@ -18,14 +18,12 @@ string_array = [
   'JavaScript IconLearn JavaScript55%'
 ].freeze
 
-def string_parser(string_array)
-  # scan - https://docs.ruby-lang.org/en//3.3/String.html#method-i-scan
-  string_array.map { |str| str.scan(/\d+/).last.to_i }
-end
+# scan - https://docs.ruby-lang.org/en//3.3/String.html#method-i-scan
+def string_parser(string_array) = string_array.map { |str| str.scan(/\d+/).last.to_i }
 
 p string_parser(string_array)
 
-describe 'String Parser' do
+describe '#string_parser' do
   it 'can take a string and output the correct values' do
     expect(string_parser(string_array)).to eq([100, 100, 50, 100, 100, 20, 1, 100, 55])
   end
