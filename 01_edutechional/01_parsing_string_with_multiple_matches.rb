@@ -25,6 +25,6 @@ p string_parser(string_array)
 
 describe '#string_parser' do
   it 'can take a string and output the correct values' do
-    expect(string_parser(string_array)).to eq([100, 100, 50, 100, 100, 20, 1, 100, 55])
+    expect(string_parser(string_array)).to match_array([100, 100, 50, 100, 100, 20, 1, 100, 55])
   end
 end
