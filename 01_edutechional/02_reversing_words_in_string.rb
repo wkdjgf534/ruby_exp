@@ -2,7 +2,7 @@
 
 require 'rspec'
 
-# the task is to reverse the words in a string, where words are separated by one or more spaces
+# The task is to reverse the words in a string, where words are separated by one or more spaces.
 #
 # https://www.youtube.com/watch?v=UfQ-wpaG1fI&list=PLgYiyoyNPrv_UhCfDLOT8yZPmVeOFjqGH&index=2
 
