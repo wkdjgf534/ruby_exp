@@ -18,7 +18,7 @@ def currency_converter(amount, location)
   end
 end
 
-puts currency_converter(5000, 'Ses')
+p currency_converter(5000, 'US')
 
 describe '#currency_converter' do
   it 'can properly format currency for US, Japan, and UK' do
