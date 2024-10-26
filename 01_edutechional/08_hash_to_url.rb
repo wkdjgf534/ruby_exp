@@ -11,9 +11,7 @@ hash = { topic: 'basketball', team: 'test_team' }
 
 # Standard Ruby Hash class
 class Hash
-  def param_converter
-    map { |i| i * '=' } * '&'
-  end
+  def param_converter = map { |i| i * '=' } * '&'
 end
 
 p hash.param_converter
