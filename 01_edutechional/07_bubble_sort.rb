@@ -7,7 +7,7 @@ require 'rspec'
 #
 # https://www.youtube.com/watch?v=olE5K0w44H0&list=PLgYiyoyNPrv_UhCfDLOT8yZPmVeOFjqGH&index=8
 
-arr = []
+arr = [1, 10, 7, 5, 2, 8, 3, 6, 4, 9]
 
 # Standard Ruby Array class
 class Array
