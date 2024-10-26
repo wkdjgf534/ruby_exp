@@ -11,7 +11,7 @@ def title_creator(title, tag) = format('<%<first_tag>s>%<title>s</%<last_tag>s>'
 
 p title_creator('test', 'h1')
 
-describe '' do
+describe '#title_creator' do
   it 'outputs an h1 tag given a title' do
     expect(title_creator('A Heading', 'h1')).to eq('<h1>A Heading</h1>')
   end
