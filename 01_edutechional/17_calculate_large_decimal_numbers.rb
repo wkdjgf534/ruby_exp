@@ -12,9 +12,7 @@ number1 = '10.0987345897234093284023'
 number2 = '42.0987345897234093284023'
 
 # Ruby has problem with long float numbers, the result of multiplication is 425.14394718482515 (incorrect answer)
-def large_number_processor(num1, num2)
-  (BigDecimal(num1) * BigDecimal(num2)).to_s('F')
-end
+def large_number_processor(num1, num2) = (BigDecimal(num1) * BigDecimal(num2)).to_s('F')
 
 p large_number_processor(number1, number2)
 
