@@ -12,6 +12,8 @@ str = 'Hi there'
 # Standard Ruby String class
 class String
   def alt_reverse
+    return self if length <= 1
+
     reversed_string = ''
     string_length = length - 1
     (0..string_length).reverse_each { |char| reversed_string += self[char] }
