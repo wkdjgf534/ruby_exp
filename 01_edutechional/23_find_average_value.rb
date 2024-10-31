@@ -14,7 +14,9 @@ class Array
   def average = sum / size
 end
 
-describe '' do
+p arr.average
+
+describe '.average' do
   it 'returns the average value from an array' do
     expect(arr.average).to eq(75)
   end
