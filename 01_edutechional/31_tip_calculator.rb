@@ -22,10 +22,10 @@ module Tippy
 
     private
 
-    def number_based? = gratuity.is_a?(Numeric) || gratuity.to_f.positive?
+    def number_based_tips? = gratuity.is_a?(Numeric) || gratuity.to_f.positive?
 
     def tip
-      tip_percent = number_based? ? (gratuity.to_f / 100) : (TIP_RATES[gratuity.downcase.to_sym] / 100)
+      tip_percent = number_based_tips? ? (gratuity.to_f / 100) : (TIP_RATES[gratuity.downcase.to_sym] / 100)
 
       total * tip_percent
     end
