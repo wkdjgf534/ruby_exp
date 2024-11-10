@@ -7,7 +7,7 @@ require 'rspec'
 #
 # https://www.youtube.com/watch?v=WtMCdRLrt6E&list=PLgYiyoyNPrv_UhCfDLOT8yZPmVeOFjqGH&index=34
 
-# Class User
+# Simple User class
 class User
   attr_accessor :name, :email
 
