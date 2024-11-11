@@ -15,12 +15,17 @@ def lineup_generator(list)
   list.map.with_index(1) { |player, index| yield(index, player) }
 end
 
+p lineup_generator(arr)
+
 p lineup_generator(arr) { |x, y| "#{x}. #{y}" }
 
 p lineup_generator(arr) { |x, y| "<p>#{x}</p> <div>#{y}</div>" }
 
 describe '#lineup_generator' do
-  it 'returns an entered array with block'
+  it 'returns an entered array with block' do
+    lineup = lineup_generator(arr)
+    expect(lineup).to match_array(arr)
+  end
 
   it 'can build a list driven lineup' do
     lineup = lineup_generator(arr) { |x, y| "#{x}. #{y}" }
