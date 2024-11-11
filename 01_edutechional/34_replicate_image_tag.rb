@@ -9,7 +9,7 @@ require 'rspec'
 
 image_path = 'https://devcamp.com/some_pic.jpg'
 
-def image_tag(image_path, options = {})
+def image_tag(image_path, **options)
   str = "<img src='#{image_path}'"
 
   options.map { |attr, value| str << " #{attr}='#{value}'" } unless options.empty?
@@ -19,7 +19,7 @@ end
 
 p image_tag(image_path)
 
-p image_tag(image_path, test: 'rest')
+p image_tag(image_path, test: 'rest', alt: 'Some text')
 
 describe '#image_tag' do
   it 'generates an HTML link' do
