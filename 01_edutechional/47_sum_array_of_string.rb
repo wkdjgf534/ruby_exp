@@ -6,9 +6,7 @@ require 'rspec'
 #
 # https://www.youtube.com/watch?v=4OIqLdTFtbQ&list=PLgYiyoyNPrv_UhCfDLOT8yZPmVeOFjqGH&index=51
 
-def string_sum(nums)
-  nums.map(&:to_i).sum
-end
+def string_sum(nums) = nums.map(&:to_i).sum
 
 p string_sum([1, 2, 3])
 
