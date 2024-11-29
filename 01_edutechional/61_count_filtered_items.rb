@@ -13,7 +13,7 @@ def greater_than_10(arr) = arr.count { |num| num > 10 }
 p greater_than_10(array)
 
 describe '#greater_than_10' do
-  it 'count how many elements are greater than 10' do
+  it 'counts how many elements are greater than 10' do
     expect(greater_than_10(array)).to eq(2)
   end
 end
