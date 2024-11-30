@@ -6,9 +6,11 @@ require 'rspec'
 #
 # https://www.youtube.com/watch?v=pypdqGclskE&list=PLgYiyoyNPrv_UhCfDLOT8yZPmVeOFjqGH&index=65
 
+LIMIT = 10
+
 array = [100, 2, 5, 10, 11]
 
-def greater_than_10(arr) = arr.count { |num| num > 10 }
+def greater_than_10(arr) = arr.count { |num| num > LIMIT }
 
 p greater_than_10(array)
 
