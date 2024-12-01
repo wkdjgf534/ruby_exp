@@ -6,7 +6,7 @@ require 'rspec'
 #
 # https://www.youtube.com/watch?v=s2iSmKPECHA&list=PLgYiyoyNPrv_UhCfDLOT8yZPmVeOFjqGH&index=16
 
-# succ - https://docs.ruby-lang.org/en//3.3/String.html#method-i-succ-21
+# succ - https://ruby-doc.org/3.3.6/String.html#method-i-succ
 def increment_value(str) = "#{str}#{str[-1].succ}"
 
 p increment_value('abcd')

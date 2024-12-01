@@ -7,7 +7,7 @@ require 'rspec'
 #
 # https://www.youtube.com/watch?v=VdwMBBkIfYk&list=PLgYiyoyNPrv_UhCfDLOT8yZPmVeOFjqGH&index=26
 
-# rotate - https://docs.ruby-lang.org/en//3.3/Array.html#method-i-rotate
+# rotate - https://ruby-doc.org/3.3.6/Array.html#method-i-rotate
 def array_rotation(arr, num) = arr.rotate(num)
 
 p array_rotation([1, 2, 3, 4, 5, 6], 2)

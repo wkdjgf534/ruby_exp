@@ -7,9 +7,9 @@ require 'rspec'
 #
 # https://www.youtube.com/watch?v=UR7N-i3FJtM&list=PLgYiyoyNPrv_UhCfDLOT8yZPmVeOFjqGH&index=22
 
-# srand - https://docs.ruby-lang.org/en/master/Kernel.html#method-i-srand
-# Fiber - https://docs.ruby-lang.org/en/master/Fiber.html
-# resume - https://docs.ruby-lang.org/en/master/Fiber.html#method-i-resume
+# srand - https://ruby-doc.org/3.3.6/Kernel.html#method-i-srand
+# Fiber - https://ruby-doc.org/3.3.6/Fiber.html
+# resume - https://ruby-doc.org/3.3.6/Fiber.html#method-i-resume
 def pseudo_random_generator(number)
   srand 1
 

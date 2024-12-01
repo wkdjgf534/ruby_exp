@@ -13,7 +13,7 @@ astros = %w[Gurriel Altuve Bregman Coreea Gattis Keuchel Beltran Springer Reddic
 
 rangers = %w[Fielder Andrus Odor Beltre Lucroy Darvish Gomez Choo Mazara]
 
-# zip - https://docs.ruby-lang.org/en//3.3/Array.html#method-i-zip
+# zip - https://ruby-doc.org/3.3.6/Array.html#method-i-zip
 def position_filter(headers, *data) = headers.zip(*data)
 
 p position_filter(headers, astros, rangers)

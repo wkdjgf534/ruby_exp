@@ -7,10 +7,10 @@ require 'rspec'
 #
 # https://www.youtube.com/watch?v=jbLDUv0-Fbg&list=PLgYiyoyNPrv_UhCfDLOT8yZPmVeOFjqGH&index=27
 
-# transpose - https://docs.ruby-lang.org/en//3.3/Array.html#method-i-transpose
+# transpose - https://ruby-doc.org/3.3.6/Array.html#method-i-transpose
 def title_builder(headers, data) = [headers, data].transpose.to_h
 
-# zip - https://docs.ruby-lang.org/en//3.3/Array.html#method-i-zip
+# zip - https://ruby-doc.org/3.3.6/Array.html#method-i-zip
 # def title_builder(headers, data) = headers.zip(data).to_h
 
 arr1 = %w[title description rating]

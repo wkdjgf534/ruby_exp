@@ -18,7 +18,7 @@ string_array = [
   'JavaScript IconLearn JavaScript55%'
 ].freeze
 
-# scan - https://docs.ruby-lang.org/en//3.3/String.html#method-i-scan
+# scan - https://ruby-doc.org/3.3.6/String.html#method-i-scan
 def string_parser(string_array) = string_array.map { |str| str.scan(/\d+/).last.to_i }
 
 p string_parser(string_array)
