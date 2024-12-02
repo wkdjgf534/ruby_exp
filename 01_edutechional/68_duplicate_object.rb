@@ -7,7 +7,7 @@ require 'rspec'
 #
 # https://www.youtube.com/watch?v=aA1FWuJh-gQ&list=PLgYiyoyNPrv_UhCfDLOT8yZPmVeOFjqGH&index=72
 
-str_array = ['some word', 'some word', 'some word']
+str_array = %w[some_word some_word some_word]
 
 def duplicate_objects(arr) = arr.map(&:to_sym)
 
