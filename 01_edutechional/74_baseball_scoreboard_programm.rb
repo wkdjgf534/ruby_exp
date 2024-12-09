@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'rspec'
-require 'date'
 
 # In this exercise, you'll build out a scoreboard program that generates an inning by inning score for
 # a baseball team along with a dynamic total.

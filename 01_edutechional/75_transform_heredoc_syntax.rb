@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'rspec'
-require 'date'
 
 # Working with multiline strings in Ruby used to result in very odd looking code because heredocs required that
 # you shift all of the string code so it was flush against the left hand side of the file.
