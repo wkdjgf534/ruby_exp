@@ -21,6 +21,7 @@ end
 
 p location_query.call(53.23, 123.32)
 p time_query.call
+
 puts user_update('Peter', location_query.call(111, 222), time_query.call)
 
 describe '#user_update' do
