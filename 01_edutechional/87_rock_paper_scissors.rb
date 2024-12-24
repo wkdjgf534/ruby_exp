@@ -25,16 +25,13 @@ class RPS
   end
 
   def winner_is
-    if rule_engine[computer_guess.to_sym].include?(@guess)
-      'Computer wins'
-    elsif rule_engine[@guess.to_sym].include?(computer_guess)
-      'You win!'
-    else
-      'Tie'
-    end
+    return 'Computer wins' if rule_engine[computer_guess.to_sym].include?(@guess)
+    return 'You win!' if rule_engine[@guess.to_sym].include?(computer_guess)
+
+    'Tie'
   end
 
-  def rule_engine = { rock: ['scissors'], paper: ['rock'], scissors: ['paper'] }
+  def rule_engine = { rock: 'scissors', paper: 'rock', scissors: 'paper' }
 end
 
 rps = RPS.new(guess: 'Rock')
