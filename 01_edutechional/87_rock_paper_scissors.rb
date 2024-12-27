@@ -38,7 +38,7 @@ rps = RPS.new(guess: 'Rock')
 
 p rps.winner_is
 
-# Note: Seeding the randomizer so the computer will always pick paper for testing
+# NOTE: Seeding the randomizer so the computer will always pick paper for testing
 describe RPS do
   it 'paper beats rock' do
     rps = RPS.new(guess: 'rock')
