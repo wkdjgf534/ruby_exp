@@ -20,7 +20,7 @@ invoices = [
 
 # Standard Ruby Array class
 class Array
-  def find_duplicates = select.with_index { |e, i| i != index(e) }
+  def find_duplicates = select.with_index { |elem, ind| ind != index(elem) }
 end
 
 p invoices.find_duplicates
