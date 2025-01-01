@@ -6,10 +6,8 @@ require_relative '../lib/dicepool'
 require_relative '../lib/monster'
 
 describe Hero do
-  let(:dicepool) { instance_double(Dicepool) }
-
   describe 'default attributes' do
-    let(:hero) { described_class.new(dicepool: dicepool) }
+    let(:hero) { described_class.new }
 
     it 'has default strength equal to 3' do
       expect(hero.strength).to eq(3)
@@ -20,31 +18,29 @@ describe Hero do
     end
 
     it 'can be initialized with custom strength' do
-      hero = described_class.new(strength: 3, dicepool: dicepool)
+      hero = described_class.new(strength: 3)
       expect(hero.strength).to eq(3)
     end
 
     it 'can be initialized with custom health' do
-      hero = described_class.new(health: 8, dicepool: dicepool)
+      hero = described_class.new(health: 8)
       expect(hero.health).to eq(8)
     end
   end
 
-  describe 'attack action' do
-    it 'succesds' do
-      dicepool.stub(:skill_check).and_return(true)
-      hero = described_class.new(dicepool: dicepool)
-      monster = instance_double(Monster, toughness: 2)
+  describe 'attack attack' do
+    let(:attack_action) { instance_double('attack_action') }
+    let(:hero) { described_class.new(actions: { attack: attack_action }) }
 
-      expect(hero.attack(monster)).to be_truthy
+    it 'has an attack action' do
+      expect(hero.actions[:attack]).to eq(attack_action)
     end
 
-    it 'fails' do
-      dicepool.stub(:skill_check).and_return(false)
-      hero = described_class.new(dicepool: dicepool)
-      monster = instance_double(Monster, toughness: 2)
+    it 'activates an attact action' do
+      monster = instance_double(Monster)
+      attack_action.should_receive(:activate)
 
-      expect(hero.attack(monster)).to be_falsey
+      hero.activate_action(:attack, monster)
     end
   end
 end
