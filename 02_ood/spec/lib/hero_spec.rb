@@ -17,6 +17,10 @@ describe Hero do
       expect(hero.health).to eq(10)
     end
 
+    it 'has default stealth equal to 1' do
+      expect(hero.stealth).to eq(1)
+    end
+
     it 'has default gold equal to 0' do
       expect(hero.gold).to eq(0)
     end
@@ -57,7 +61,18 @@ describe Hero do
     expect(hero.exp).to eq(7)
   end
 
-  describe 'attack attack' do
+  describe 'flee state' do
+    it 'does not flee by default' do
+      expect(hero).not_to be_fled
+    end
+
+    it 'flees from battle' do
+      hero.flee
+      expect(hero).to be_fled
+    end
+  end
+
+  describe 'attack state' do
     let(:attack_action) { instance_double(AttackAction) }
     let(:hero) { described_class.new(actions: { attack: attack_action }) }
 

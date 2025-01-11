@@ -1,19 +1,15 @@
 # frozen_string_literal: true
 
-class AttackAction
-  attr_reader :owner, :dicepool
+require_relative 'action'
 
-  def initialize(owner, dicepool)
-    @owner = owner
-    @dicepool = dicepool
-  end
-
-  def activate(target)
-    dicepool.skill_check(owner.strength, target.toughness) ? success(target) : failure(target)
+class AttackAction < Action
+  def action_attributes
+    @attribute = :strength
+    @difficulty = :toughness
   end
 
   def success(target)
-    target.kill
+    target.kill!
     owner.gain_exp(3)
     owner.gain_gold(3)
   end
