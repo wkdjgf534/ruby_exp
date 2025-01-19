@@ -19,7 +19,7 @@ def csv_tool(headers, data)
   CSV.open('support/generated_file.csv', 'wb') do |csv|
     csv << headers
 
-    data.each { |column| csv << column }
+    data.each { csv << it }
   end
 end
 

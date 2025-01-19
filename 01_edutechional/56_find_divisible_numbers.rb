@@ -7,7 +7,7 @@ require 'rspec'
 # https://www.youtube.com/watch?v=R8VHPUXcUb0&list=PLgYiyoyNPrv_UhCfDLOT8yZPmVeOFjqGH&index=60
 
 # detect - https://ruby-doc.org/3.3.6/Enumerable.html#method-i-detect
-def mod_checker(arr, num1, num2) = arr.detect { |mod| (mod % num1).zero? && (mod % num2).zero? }
+def mod_checker(arr, num1, num2) = arr.detect { (it % num1).zero? && (it % num2).zero? }
 
 p mod_checker(1..200, 12, 16)
 

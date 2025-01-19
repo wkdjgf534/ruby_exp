@@ -11,7 +11,7 @@ arr_two = %w[words that nave not all 4 chatacters long]
 
 # Standard Ruby Array class
 class Array
-  def at_least_four_characters? = all? { |elem| elem.length >= 4 }
+  def at_least_four_characters? = all? { it.length >= 4 }
 end
 
 p arr_one.at_least_four_characters?

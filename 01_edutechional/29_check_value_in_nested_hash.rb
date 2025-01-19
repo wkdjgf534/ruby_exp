@@ -20,7 +20,7 @@ books = [
 
 # Standard Ruby Array class
 class Array
-  def value_included?(value) = any? { |obj| obj.value?(value) }
+  def value_included?(value) = any? { it.value?(value) }
 end
 
 p books.value_included?('Deep Work')

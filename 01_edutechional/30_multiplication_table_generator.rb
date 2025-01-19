@@ -10,7 +10,7 @@ require 'rspec'
 def multiplication_table(num)
   hash = {}
   selected_range = 1..10
-  1.upto(num) { |i| hash[i] = selected_range.map { |res| res * i } }
+  1.upto(num) { |i| hash[i] = selected_range.map { it * i } }
 
   hash
 end

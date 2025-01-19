@@ -12,7 +12,7 @@ arr = [2, 5, 100, 4]
 # Standard Ruby Array class
 class Array
   def does_it_have?(element)
-    each { |i| return true if i == element }
+    each { return true if it == element }
     false
   end
 end

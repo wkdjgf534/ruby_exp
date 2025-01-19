@@ -15,7 +15,7 @@ class String
 
   def word_list
     list = Hash.new(0)
-    downcase.scan(/\w+/) { |w| list[w] += 1 }
+    downcase.scan(/\w+/) { list[it] += 1 }
     list
   end
 end

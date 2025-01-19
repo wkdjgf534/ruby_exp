@@ -19,7 +19,7 @@ string_array = [
 ].freeze
 
 # scan - https://ruby-doc.org/3.3.6/String.html#method-i-scan
-def string_parser(string_array) = string_array.map { |str| str.scan(/\d+/).last.to_i }
+def string_parser(string_array) = string_array.map { it.scan(/\d+/).last.to_i }
 
 p string_parser(string_array)
 

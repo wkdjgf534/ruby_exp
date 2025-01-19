@@ -6,7 +6,7 @@ require 'rspec'
 #
 # https://www.youtube.com/watch?v=3GF8NrX66OM&list=PLgYiyoyNPrv_UhCfDLOT8yZPmVeOFjqGH&index=62
 
-def mod_checker(arr, num1, num2) = arr.select { |mod| (mod % num1).zero? && (mod % num2).zero? }
+def mod_checker(arr, num1, num2) = arr.select { (it % num1).zero? && (it % num2).zero? }
 
 p mod_checker(1..200, 12, 16)
 
