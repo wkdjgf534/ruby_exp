@@ -11,11 +11,11 @@ class Action
   end
 
   def action_attributes
-    railse 'You must initialize @attriubte and @difficulty'
+    raise 'You must initialize @attriubte and @difficulty'
   end
 
   def activate(target)
-    dicepool.skill_check(owner.send(@attribute), target.send(difficulty)) ? success(target) : failure(target)
+    dicepool.skill_check(owner.send(attribute), target.send(difficulty)) ? success(target) : failure(target)
   end
 
   def success; end
