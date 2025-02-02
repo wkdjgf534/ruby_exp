@@ -8,12 +8,12 @@ require_relative '../../lib/monster'
 
 describe FleeAction do
   let(:hero) { instance_double(Hero, strength: 3, gain_exp: nil, gain_gold: nil, damage: nil, stealth: 3) }
-  let(:action) { described_class.new(hero, dicepool) }
+  let(:action) { described_class.new(hero) }
   let(:dicepool) { instance_double(Dicepool) }
   let(:monster) { instance_double(Monster, toughness: 2, damage: 4, notice: 2) }
 
+  it_behaves_like 'actionable'
   it_behaves_like 'action'
-  it_behaves_like 'subaction'
 
   it 'has stealth for attribute' do
     expect(action.attribute).to eq(:stealth)
@@ -24,6 +24,8 @@ describe FleeAction do
   end
 
   describe 'effect' do
+    before { Dicepool.stub(:new).and_return(dicepool) }
+
     context 'when success' do
       it 'sends flee message to the owner' do
         dicepool.stub(:skill_check).and_return(true)

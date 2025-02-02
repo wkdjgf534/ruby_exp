@@ -1,11 +1,13 @@
 # frozen_string_literal: true
 
-class Action
+require_relative 'dicepool'
+
+module Actionable
   attr_reader :owner, :dicepool, :attribute, :difficulty
 
-  def initialize(owner, dicepool)
+  def initialize(owner = nil)
     @owner = owner
-    @dicepool = dicepool
+    @dicepool = Dicepool.new
 
     action_attributes
   end

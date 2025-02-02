@@ -6,26 +6,26 @@ require_relative '../../lib/hero'
 require_relative '../../lib/dicepool'
 require_relative '../../lib/monster'
 
-class TestAction < Action
+class TestAction
+  include Actionable
+
   def action_attributes
     @attribute = :strength
     @difficulty = :toughness
   end
 end
 
-describe Action do
+describe Actionable do
   let(:hero) { instance_double(Hero, strength: 3, gain_exp: nil, gain_gold: nil, damage: nil) }
-  let(:action) { TestAction.new(hero, dicepool) }
+  let(:action) { TestAction.new(hero) }
   let(:dicepool) { instance_double(Dicepool) }
   let(:monster) { instance_double(Monster, toughness: 2, damage: 4) }
 
   it_behaves_like 'action'
 
-  it 'returns action attrbiutes to be implemented' do
-    expect { described_class.new(hero, dicepool) }.to raise_exception('You must initialize @attriubte and @difficulty')
-  end
-
   describe 'activate' do
+    before { Dicepool.stub(:new).and_return(dicepool) }
+
     it 'sends success message if skill check is successful' do
       dicepool.stub(:skill_check).and_return(true)
       action.stub(:activate).and_return(:success)
