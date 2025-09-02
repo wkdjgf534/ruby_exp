@@ -3,7 +3,7 @@
 require_relative '../lib/template_method'
 
 describe 'Tempalte Method Pattern' do
-  context 'when default h ero' do
+  context 'when default hero' do
     let(:hero) { Hero.new }
 
     it 'has default damage rating of 10' do
