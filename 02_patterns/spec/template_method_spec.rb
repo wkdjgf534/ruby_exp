@@ -2,9 +2,9 @@
 
 require_relative '../lib/template_method'
 
-describe 'Tempalte Method Pattern' do
+RSpec.describe 'Template Method Pattern' do
   context 'when default hero' do
-    let(:hero) { Hero.new }
+    let(:hero) { TMHero.new }
 
     it 'has default damage rating of 10' do
       expect(hero.damage).to eq(10)

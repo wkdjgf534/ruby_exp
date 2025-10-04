@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Hero
-class Hero
+class TMHero
   attr_reader :damage, :abilities
 
   def initialize
@@ -27,7 +27,7 @@ class Hero
 end
 
 # Warrior
-class Warrior < Hero
+class Warrior < TMHero
   def damage_rating = 15
 
   def occupation_abilities = [:strike]
@@ -36,7 +36,7 @@ class Warrior < Hero
 end
 
 # Mage
-class Mage < Hero
+class Mage < TMHero
   def damage_rating = 7
 
   def occupation_abilities = [:magic_arrow]

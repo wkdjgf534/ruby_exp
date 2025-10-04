@@ -2,14 +2,14 @@
 
 require_relative '../lib/strategy'
 
-describe 'Strategy Pattern' do
+RSpec.describe 'Strategy Pattern' do
   describe 'Strategy Contract' do
     it 'Hero sends print message to printer' do
       printer = instance_double(BattleStats)
       printer.stub(:print)
-      hero = Hero.new(printer)
+      hero = SHero.new(printer)
 
-      printer.should_receive(:print).with(hero.damage, hero.health, hero.skills)
+      expect(printer).to receive(:print).with(hero.damage, hero.health, hero.skills)
       hero.print_stats
     end
 
@@ -22,7 +22,7 @@ describe 'Strategy Pattern' do
     end
   end
 
-  describe Hero do
+  describe SHero do
     let(:hero) { described_class.new(BattleStats.new) }
 
     it 'has damage' do
@@ -44,7 +44,7 @@ describe 'Strategy Pattern' do
       end
 
       it 'can use custom ad hoc printer' do
-        result = hero.print_stats do |damage, health, skills|
+        result = hero.print_stats do |damage, _, skills|
           "Damage: #{damage}\nNumber of skills: #{skills.size}"
         end
         expect(result).to eq("Damage: 10\nNumber of skills: 3")

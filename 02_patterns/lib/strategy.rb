@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Hero
-class Hero
+class SHero
   attr_reader :damage, :health, :skills
   attr_accessor :printer
 
@@ -20,6 +20,7 @@ class Hero
   end
 end
 
+# HTMLPrimer
 class HTMLPrinter
   def print(damage, health, skills)
     result = header
@@ -36,21 +37,21 @@ class HTMLPrinter
     '</html>'
   end
 
-  def content(damage, health, skills)
+  def content(_, _, _)
     raise 'You must implement content'
   end
 end
 
 # BattleStats
 class BattleStats < HTMLPrinter
-  def content(damage, health, skills)
+  def content(damage, health, _)
     "Damage: #{damage}\nHealth: #{health}"
   end
 end
 
 # SkillStats
 class SkillStats < HTMLPrinter
-  def content(damage, health, skills)
+  def content(_, _, skills)
     skills.inject('') { |result, skill| "#{result}#{skill.to_s.capitalize}\n" }
   end
 end
