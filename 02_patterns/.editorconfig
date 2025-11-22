@@ -1,5 +1,0 @@
-root = true
-
-[*.rb]
-intent_style = space
-intent_size = 2

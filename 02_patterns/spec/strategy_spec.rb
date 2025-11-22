@@ -22,7 +22,7 @@ RSpec.describe 'Strategy Pattern' do
     end
   end
 
-  describe SHero do
+  describe Hero do
     let(:hero) { described_class.new(BattleStats.new) }
 
     it 'has damage' do
