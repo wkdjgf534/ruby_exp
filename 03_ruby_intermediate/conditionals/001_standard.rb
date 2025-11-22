@@ -9,5 +9,5 @@ grade = 100
 if grade >= 90
   puts 'Congratulations Honor Student'
 else
-  puts 'work harder'
+  puts 'Work harder'
 end
