@@ -1,3 +1,3 @@
-### patterns
+### Ruby: Intermediate
 
-Ruby Patterns In Ruby
+Ruby Basic Course: Techniques for Writing Better Code
