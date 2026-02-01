@@ -21,13 +21,27 @@ post user
 ```ruby
 mutation {
   createUser(input: {
-    name: "Rails Test",
-    email: "rails.test@test.com"
+    name: "PW Test",
+    email: "pw.test@test.com"
+    password: "wonderfullpassword"
   }) {
     user {
       id,
       email
     }
+  }
+}
+```
+
+login user
+
+```ruby
+mutation {
+  login(input: {
+    email: "pw.test@test.com"
+    password: "wonderfullpassword"
+  }) {
+    token
   }
 }
 ```
