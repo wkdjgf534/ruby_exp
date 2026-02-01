@@ -1,10 +1,12 @@
 ### Rails Graphql App
 
+link to: [Unlocking GraphQL's Power with Rails: What No One's Told You Yet!](https://www.youtube.com/watch?v=nnHYfNRGFKQ)
+
 visit URL: http://localhost:3000/graphiql
 
 input someting
 
-get data
+### Get user
 
 ```ruby
 query {
@@ -16,7 +18,7 @@ query {
 }
 ```
 
-post user
+### Post user
 
 ```ruby
 mutation {
@@ -33,7 +35,7 @@ mutation {
 }
 ```
 
-login user
+### Login user
 
 ```ruby
 mutation {
