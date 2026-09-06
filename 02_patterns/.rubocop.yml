@@ -1,7 +1,0 @@
-require:
-  - standard
-  - rubocop-rspec
-  - rubocop-performance
-
-Metrics/MethodLength:
-  Max: 15
